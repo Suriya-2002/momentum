@@ -1,0 +1,8 @@
+.greet {
+    transform: translateY(-10%);
+
+    &__text {
+        font-size: 8rem;
+        font-weight: 600;
+    }
+}

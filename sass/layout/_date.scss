@@ -1,0 +1,22 @@
+.date {
+    width: 100%;
+    position: relative;
+
+    &__text {
+        font-size: 10rem;
+        font-weight: 900;
+        text-shadow: 0 2rem 2rem #000;
+        width: 90%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__year {
+        font-size: 32rem;
+        font-weight: 600;
+        line-height: 25rem;
+        opacity: 0.3;
+    }
+}

@@ -1,0 +1,15 @@
+.time {
+    &__text {
+        font-size: 16rem;
+        font-weight: 600;
+    }
+
+    &__seconds {
+        font-size: 8rem;
+        margin: 0 2rem 0 3rem;
+    }
+
+    &__am-pm {
+        font-size: 4rem;
+    }
+}

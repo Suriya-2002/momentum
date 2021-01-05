@@ -1,0 +1,23 @@
+.conatiner {
+    color: $color-white;
+    background-color: $color-black;
+}
+
+.content {
+    height: 100vh;
+    width: 100vw;
+    padding: 3rem 6rem;
+    background-image: url('../assets/images/0.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    text-shadow: 0 2rem 2rem #000;
+    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+    cursor: default;
+}

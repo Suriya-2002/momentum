@@ -10,9 +10,11 @@
 
 // @import './components';
 
-// @import './layout';
+@import './layout/date';
+@import './layout/greet';
+@import './layout/time';
 
-// @import './pages';
+@import './pages/home';
 
 // @import './themes';
 
