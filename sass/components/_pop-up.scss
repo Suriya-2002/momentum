@@ -1,0 +1,91 @@
+.pop-up {
+    color: $color-black;
+    background-color: $color-white;
+    border-radius: 0.5rem;
+    box-shadow: 0 2rem 4rem rgba($color-black, 0.5);
+    width: 70rem;
+    height: 28rem;
+    margin-top: 2rem;
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    transition: all 0.4s ease-in-out;
+
+    &__title {
+        font-size: 4rem;
+        font-weight: 900;
+        text-transform: capitalize;
+    }
+
+    &__input {
+        font-size: 2.5rem;
+        font-weight: 600;
+        border: 0.2rem solid rgba($color-black, 0.5);
+        outline: none;
+        border-radius: 100rem;
+        width: 98%;
+        margin-bottom: 2.5rem;
+        padding: 1rem 3rem;
+        transition: all 0.3s ease-in-out;
+
+        &:focus {
+            width: 100%;
+            border: 0.25rem solid $color-black;
+        }
+    }
+
+    &__btn-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        align-self: flex-end;
+    }
+
+    &__btn {
+        font-size: 2.5rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        border: 0.2rem solid rgba($color-black, 0.5);
+        outline: none;
+        border-radius: 100rem;
+        padding: 1.5rem 4rem;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            box-shadow: 0 2rem 4rem rgba($color-black, 0.5);
+            transform: translateY(-0.5rem);
+        }
+
+        &:active {
+            box-shadow: 0 1rem 4rem rgba($color-black, 0.3);
+            transform: translateY(-0.2rem);
+        }
+
+        &--submit {
+            color: $color-white;
+            background-color: rgba($color-black, 0.85);
+            margin-left: 3rem;
+        }
+
+        &--cancel:hover,
+        &--cancel:active {
+            border: 0.2rem solid rgba($color-white, 0.5);
+        }
+    }
+
+    &--show {
+        opacity: 1;
+        pointer-events: all;
+        transform: translate(-50%, 0);
+    }
+}

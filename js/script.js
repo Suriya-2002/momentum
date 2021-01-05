@@ -1,3 +1,7 @@
+const greetName = document.querySelector('.greet__name');
+const popUp = document.querySelector('.pop-up');
+const popUpInput = document.querySelector('.pop-up__input');
+
 const refreshTime = () => {
     const date = new Date();
     let hour = date.getHours();
@@ -79,4 +83,55 @@ const addZero = time => {
     return time;
 };
 
+const registerUserName = () => {
+    let name;
+    popUpInput.value = '';
+    popUp.classList.add('pop-up--show');
+
+    document.querySelector('.pop-up__btn--submit').addEventListener('click', () => {
+        if (!popUpInput.value) popUpInput.style.animation = 'shake 0.5s ease-in-out';
+        else {
+            popUp.classList.remove('pop-up--show');
+            name = popUpInput.value;
+            name = name[0].toUpperCase() + name.slice(1);
+            localStorage.setItem('name', name);
+
+            greetName.innerHTML = name;
+            document.title = 'Welcome ' + name;
+        }
+    });
+
+    popUp.addEventListener('animationend', () => {
+        popUpInput.style.animation = '';
+    });
+
+    document.querySelector('.pop-up__btn--cancel').addEventListener(
+        'click',
+        () => {
+            let name = localStorage.getItem('name') ? localStorage.getItem('name') : 'Guest';
+            popUp.classList.remove('pop-up--show');
+
+            localStorage.setItem('name', name);
+
+            greetName.innerHTML = name;
+            document.title = 'Welcome ' + name;
+        },
+        { once: true },
+    );
+};
+
+greetName.addEventListener('click', registerUserName);
+
+const getUserName = () => {
+    let name = localStorage.getItem('name');
+    if (!name) registerUserName();
+
+    if (name) {
+        name = name[0].toUpperCase() + name.slice(1);
+        greetName.innerHTML = name;
+        document.title = 'Welcome ' + name;
+    }
+};
+
 refreshTime();
+getUserName();
