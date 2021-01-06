@@ -1,3 +1,4 @@
+const googleSearchInputContainer = document.querySelector('.google-search__input-container');
 const greetName = document.querySelector('.greet__name');
 const popUp = document.querySelector('.pop-up');
 const popUpInput = document.querySelector('.pop-up__input');
@@ -132,6 +133,17 @@ const getUserName = () => {
         document.title = 'Welcome ' + name;
     }
 };
+
+document.querySelector('.google-search').addEventListener('click', () => {
+    if (!googleSearchInputContainer.classList.contains('google-search__input-container--show')) {
+        googleSearchInputContainer.classList.add('google-search__input-container--show');
+    }
+});
+
+document.querySelector('.content').addEventListener('click', event => {
+    event.stopPropagation();
+    googleSearchInputContainer.classList.remove('google-search__input-container--show');
+});
 
 refreshTime();
 getUserName();
