@@ -21,6 +21,15 @@
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 109.375em) {
+    html {
+      font-size: 55%; } }
+  @media only screen and (max-width: 103.125em) {
+    html {
+      font-size: 45%; } }
+  @media only screen and (max-width: 87.5em) {
+    html {
+      font-size: 38%; } }
 
 body {
   box-sizing: border-box; }
@@ -186,12 +195,17 @@ body {
   .greet__text {
     font-size: 8rem;
     font-weight: 600; }
+    @media only screen and (max-width: 106.25em) {
+      .greet__text {
+        font-size: 7rem;
+        margin: 1rem; } }
   .greet__name {
     cursor: pointer; }
 
 .time__text {
   font-size: 16rem;
-  font-weight: 600; }
+  font-weight: 600;
+  transform: translateY(15%); }
 
 .time__seconds {
   font-size: 8rem;

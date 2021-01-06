@@ -4,6 +4,11 @@
     &__text {
         font-size: 8rem;
         font-weight: 600;
+
+        @include responsive(1700) {
+            font-size: 7rem;
+            margin: 1rem;
+        }
     }
 
     &__name {

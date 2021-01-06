@@ -8,6 +8,18 @@
 
 html {
     font-size: 62.5%;
+
+    @include responsive(desk) {
+        font-size: 55%;
+    }
+
+    @include responsive(1650) {
+        font-size: 45%;
+    }
+
+    @include responsive(1400) {
+        font-size: 38%;
+    }
 }
 
 body {
