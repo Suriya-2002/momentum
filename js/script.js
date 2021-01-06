@@ -63,7 +63,7 @@ const getGreetings = hour => {
 
 const change12HoursClock = hour => {
     if (hour > 12) return hour - 12;
-    hour;
+    return hour;
 };
 
 const changeSuperScript = date => {
