@@ -20,4 +20,9 @@
     align-items: center;
     overflow: hidden;
     cursor: default;
+
+    @include responsive(tab-l) {
+        padding-top: 25rem;
+        justify-content: center;
+    }
 }

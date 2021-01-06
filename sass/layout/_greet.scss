@@ -9,6 +9,11 @@
             font-size: 7rem;
             margin: 1rem;
         }
+
+        @include responsive(tab-l) {
+            margin: 2rem 0;
+            font-size: 6rem;
+        }
     }
 
     &__name {

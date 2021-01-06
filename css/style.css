@@ -30,6 +30,15 @@ html {
   @media only screen and (max-width: 87.5em) {
     html {
       font-size: 38%; } }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 40%; } }
+  @media only screen and (max-width: 46.875em) {
+    html {
+      font-size: 35%; } }
 
 body {
   box-sizing: border-box; }
@@ -58,15 +67,24 @@ body {
   align-items: flex-start;
   opacity: 0;
   pointer-events: none;
+  z-index: 3;
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%, -10%);
   transition: all 0.4s ease-in-out; }
+  @media only screen and (max-width: 56.25em) {
+    .pop-up {
+      width: 95vw;
+      height: 50rem;
+      padding: 5rem; } }
   .pop-up__title {
     font-size: 4rem;
     font-weight: 900;
     text-transform: capitalize; }
+    @media only screen and (max-width: 56.25em) {
+      .pop-up__title {
+        font-size: 5rem; } }
   .pop-up__input {
     font-size: 2.5rem;
     font-weight: 600;
@@ -80,6 +98,10 @@ body {
     .pop-up__input:focus {
       width: 100%;
       border: 0.25rem solid #000; }
+    @media only screen and (max-width: 56.25em) {
+      .pop-up__input {
+        font-size: 4rem;
+        margin: 4rem 0 8rem 0; } }
   .pop-up__btn-container {
     display: flex;
     justify-content: flex-end;
@@ -108,6 +130,9 @@ body {
       margin-left: 3rem; }
     .pop-up__btn--cancel:hover, .pop-up__btn--cancel:active {
       border: 0.2rem solid rgba(255, 255, 255, 0.5); }
+    @media only screen and (max-width: 56.25em) {
+      .pop-up__btn {
+        font-size: 4rem; } }
   .pop-up--show {
     opacity: 1;
     pointer-events: all;
@@ -176,6 +201,13 @@ body {
     padding: 1.5rem 3rem;
     cursor: text;
     transition: all 0.2s; }
+    @media only screen and (max-width: 75em) {
+      .google-search__input {
+        width: 40vw; } }
+    @media only screen and (max-width: 56.25em) {
+      .google-search__input {
+        font-size: 4rem;
+        width: 60vw; } }
   .google-search__btn {
     color: rgba(0, 0, 0, 0.8);
     background-color: transparent;
@@ -199,6 +231,10 @@ body {
       .greet__text {
         font-size: 7rem;
         margin: 1rem; } }
+    @media only screen and (max-width: 75em) {
+      .greet__text {
+        margin: 2rem 0;
+        font-size: 6rem; } }
   .greet__name {
     cursor: pointer; }
 
@@ -206,13 +242,25 @@ body {
   font-size: 16rem;
   font-weight: 600;
   transform: translateY(15%); }
+  @media only screen and (max-width: 56.25em) {
+    .time__text {
+      transform: translateY(0); } }
 
 .time__seconds {
   font-size: 8rem;
   margin: 0 2rem 0 3rem; }
+  @media only screen and (max-width: 56.25em) {
+    .time__seconds {
+      display: none; } }
 
 .time__am-pm {
   font-size: 4rem; }
+  @media only screen and (max-width: 75em) {
+    .time__am-pm {
+      font-size: 6rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .time__am-pm {
+      margin-left: 3rem; } }
 
 .conatiner {
   color: #fff;
@@ -235,3 +283,7 @@ body {
   align-items: center;
   overflow: hidden;
   cursor: default; }
+  @media only screen and (max-width: 75em) {
+    .content {
+      padding-top: 25rem;
+      justify-content: center; } }

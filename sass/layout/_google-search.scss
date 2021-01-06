@@ -57,6 +57,15 @@
         padding: 1.5rem 3rem;
         cursor: text;
         transition: all 0.2s;
+
+        @include responsive(tab-l) {
+            width: 40vw;
+        }
+
+        @include responsive(tab-p) {
+            font-size: 4rem;
+            width: 60vw;
+        }
     }
 
     &__btn {

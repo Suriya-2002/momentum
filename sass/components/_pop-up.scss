@@ -13,16 +13,27 @@
     align-items: flex-start;
     opacity: 0;
     pointer-events: none;
+    z-index: 3;
     position: absolute;
     top: 0;
     left: 50%;
     transform: translate(-50%, -10%);
     transition: all 0.4s ease-in-out;
 
+    @include responsive(tab-p) {
+        width: 95vw;
+        height: 50rem;
+        padding: 5rem;
+    }
+
     &__title {
         font-size: 4rem;
         font-weight: 900;
         text-transform: capitalize;
+
+        @include responsive(tab-p) {
+            font-size: 5rem;
+        }
     }
 
     &__input {
@@ -39,6 +50,11 @@
         &:focus {
             width: 100%;
             border: 0.25rem solid $color-black;
+        }
+
+        @include responsive(tab-p) {
+            font-size: 4rem;
+            margin: 4rem 0 8rem 0;
         }
     }
 
@@ -80,6 +96,10 @@
         &--cancel:hover,
         &--cancel:active {
             border: 0.2rem solid rgba($color-white, 0.5);
+        }
+
+        @include responsive(tab-p) {
+            font-size: 4rem;
         }
     }
 

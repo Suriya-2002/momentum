@@ -3,14 +3,30 @@
         font-size: 16rem;
         font-weight: 600;
         transform: translateY(15%);
+
+        @include responsive(tab-p) {
+            transform: translateY(0);
+        }
     }
 
     &__seconds {
         font-size: 8rem;
         margin: 0 2rem 0 3rem;
+
+        @include responsive(tab-p) {
+            display: none;
+        }
     }
 
     &__am-pm {
         font-size: 4rem;
+
+        @include responsive(tab-l) {
+            font-size: 6rem;
+        }
+
+        @include responsive(tab-p) {
+            margin-left: 3rem;
+        }
     }
 }
