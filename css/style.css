@@ -39,6 +39,12 @@ html {
   @media only screen and (max-width: 46.875em) {
     html {
       font-size: 35%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 30%; } }
+  @media only screen and (max-width: 25em) {
+    html {
+      font-size: 25%; } }
 
 body {
   box-sizing: border-box; }
@@ -78,6 +84,9 @@ body {
       width: 95vw;
       height: 50rem;
       padding: 5rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .pop-up {
+      height: 45rem; } }
   .pop-up__title {
     font-size: 4rem;
     font-weight: 900;
@@ -150,6 +159,9 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
+    @media only screen and (max-width: 25em) {
+      .date__text {
+        font-size: 8rem; } }
   .date__year {
     font-size: 32rem;
     font-weight: 600;
@@ -175,6 +187,9 @@ body {
       transform: scale(1.3); }
     .google-search__icon:focus, .google-search__icon:active {
       transform: scale(1.1); }
+    @media only screen and (max-width: 37.5em) {
+      .google-search__icon {
+        font-size: 8rem; } }
   .google-search__input-container {
     width: 100%;
     background-color: #fff;
@@ -235,6 +250,9 @@ body {
       .greet__text {
         margin: 2rem 0;
         font-size: 6rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .greet__text {
+        margin: 5rem 0; } }
   .greet__name {
     cursor: pointer; }
 

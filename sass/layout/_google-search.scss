@@ -25,6 +25,10 @@
         &:active {
             transform: scale(1.1);
         }
+
+        @include responsive(mob) {
+            font-size: 8rem;
+        }
     }
 
     &__input-container {

@@ -11,6 +11,10 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        @include responsive(400) {
+            font-size: 8rem;
+        }
     }
 
     &__year {

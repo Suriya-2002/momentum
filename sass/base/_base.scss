@@ -32,6 +32,14 @@ html {
     @include responsive(750) {
         font-size: 35%;
     }
+
+    @include responsive(mob) {
+        font-size: 30%;
+    }
+
+    @include responsive(400) {
+        font-size: 25%;
+    }
 }
 
 body {
